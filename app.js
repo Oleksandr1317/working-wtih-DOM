@@ -1,7 +1,15 @@
-// document.body.children[1].children[0].href = 'https://google.com'
+let paragraphElement = document.querySelector('p');
+function changeParagraphText() {
+    paragraphElement.textContent = 'clicked';
+}
+paragraphElement.addEventListener('click', changeParagraphText ) // что-бы выполнялось после нажатия функция без скобочек
 
-let anchorElement = document.getElementById("external-link");
-anchorElement.href = 'https://google.com';
-
-anchorElement = document.querySelector('a');
-anchorElement.href = 'https://bing.com';
+let myInputElement = document.querySelector('input');
+function retriveUserInput(event) {
+    // let enteredText = myInputElement.value;
+    let enteredText = event.target.value;
+    // let enteredText = event.data;
+    console.log(enteredText);
+    // console.log(event)
+}
+myInputElement.addEventListener('input', retriveUserInput);
